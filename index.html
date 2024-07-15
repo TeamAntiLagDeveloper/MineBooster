@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MineBooster - TeamAntiLag</title>
+  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link rel="stylesheet" href="media/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css">
+  <style>
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0e0;
+      border-radius: 6px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #090;
+    }
+    body {
+      height: 200vh;
+      overflow-y: auto;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .content {
+      padding: 20px;
+    }
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="desktop_navbar animated fadeIn">
+    <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+    <a href="https://www.youtube.com/@kaykekkj/videos" class="desktop_navbar_link">Kayke Klippel</a>
+    <a href="#discord" class="desktop_navbar_link scroll">Discord</a>
+    <div class="desktop_navbar_link2_div">
+      <a href="#discord" class="desktop_navbar_link2 scroll">Discord</a>
+    </div>
+  </nav>
+  <div class="icon" onclick="toggleMobileMenu()">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="mainflex animated fadeIn">
+    <div class="main1">
+      <a class="main1_logo_a" href="#">
+        <img class="main1_logo" src="media/logo.png" alt="logo">
+      </a>
+      <div class="main1_ipcopier_div">
+        <a href="https://fir3.net/MineBooster" class="main1_ipcopier">
+          <span class="main1_ipcopier_text1">Download - MineBooster</span>
+        </a>
+      </div>
+      <a href="#more" class="scroll">
+        <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+      </a>
+    </div>
+    <div id="discord" class="animated fadeIn"></div>
+    <div class="main4 animated fadeIn">
+      <a class="headline">Entrar no Discord</a>
+      <div class="main4_dc_div">
+        <div class="discord-container">
+          <iframe src="https://discord.com/widget?id=1090105722139852851&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <div class="main4_dc_description_div">
+          <a class="main4_dc_description_title">Crie novos Vínculos</a>
+          <a class="main4_dc_description"> ・Conheça outros jogadores <br> ・Tire todas suas Dúvidas <br> ・Seja notificado sobre atualizações <br> ・Adicione um Feedback<br><br></a>
+          <a href="https://discord.gg/teamantilag" class="main4_dc_button_a">
+            <div class="main4_dc_button">Entrar</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="copyright_div animated fadeIn">
+    <a href="https://www.youtube.com/@kaykekkj/videos" class="copyright">Made By TeamAntiLag 2024 - Edited by [ kayke klippel ]</a>
+  </footer>
+    <script>
+    function toggleMobileMenu() {
+      document.querySelector('.desktop_navbar').classList.toggle('active');
+    }
+    document.querySelectorAll('.scroll').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
